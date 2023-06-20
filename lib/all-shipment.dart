@@ -166,7 +166,7 @@ class _shipmentState extends State<shipment>
                     child: Column(
                       children: [
                         Container(
-                          height: size.height / 4.0,
+                          height: 200,
                           width: size.width / 1.1,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20.0),
@@ -235,6 +235,7 @@ class _shipmentState extends State<shipment>
                                     ),
                                   ],
                                 ),
+                                SizedBox(height: 10),
                                 Row(
                                   children: [
                                     Column(
@@ -278,8 +279,9 @@ class _shipmentState extends State<shipment>
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 10),
-                                Row(
+                                Padding(
+                                   padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  child:  Row(
                                   children: [
                                     Text(
                                       shipment.amount,
@@ -308,6 +310,9 @@ class _shipmentState extends State<shipment>
                                     ),
                                   ],
                                 ),
+                              
+                                )
+                              
                               ],
                             ),
                           ),

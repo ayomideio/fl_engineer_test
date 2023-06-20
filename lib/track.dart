@@ -9,7 +9,9 @@ class Track extends StatefulWidget {
   State<Track> createState() => _TrackState();
 }
 
-class _TrackState extends State<Track> {
+class _TrackState extends State<Track>  with SingleTickerProviderStateMixin {
+  late AnimationController _animationController;
+  late Animation<double> _slideAnimation;
   final List<Products> productList = [
     Products(
         productName: 'Macbook pro M2',
@@ -38,14 +40,30 @@ List<Products> sortedProductList = [];
   @override
   void initState() {
     super.initState();
+      _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 500),
+    );
+    _slideAnimation =
+        Tween<double>(begin: 0.0, end: 1.0).animate(_animationController);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _animationController.forward();
+    });
     sortedProductList = sortProductsByShippingNumber(widget.shippingNumber);
   }
-
+ @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
   @override
   void didUpdateWidget(Track oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.shippingNumber != widget.shippingNumber) {
+       _animationController.reset();
+      _animationController.forward();
       sortedProductList = sortProductsByShippingNumber(widget.shippingNumber);
+
     }
   }
 
@@ -68,7 +86,13 @@ List<Products> sortedProductList = [];
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
 
-    return Container(
+    return SlideTransition(
+      position: Tween<Offset>(
+        begin: const Offset(0, 1),
+        end: Offset.zero,
+      ).animate(_slideAnimation),
+      child:
+    Container(
       color: Color(0xffFBFAF),
       child: SingleChildScrollView(
         child: Column(
@@ -135,6 +159,6 @@ List<Products> sortedProductList = [];
           ],
         ),
       ),
-    );
+    ),);
   }
 }

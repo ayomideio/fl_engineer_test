@@ -102,7 +102,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 child: Column(
                   children: [
                     Container(
-                      height: size.height / 2.8,
+                      height: 265,
                       width: size.width / 1.1,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20.0),
@@ -152,7 +152,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                               ],
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 15,
                             ),
                             Divider(
                               height: 1,
@@ -311,14 +311,14 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                               ],
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 15,
                             ),
                             Divider(
                               height: 1,
                               color: Colors.grey,
                             ),
-                          Padding(padding: const EdgeInsets.symmetric(vertical: 10.0),
-                          child:TextButton.icon(
+                         
+                          TextButton.icon(
                               onPressed: () {
                                 // Handle button press
                               },
@@ -331,7 +331,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                               ),
                             )
                          
-                          )
+                          
                             
                           ],
                         ),
