@@ -80,7 +80,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
           SizedBox(
             height: 20,
           ),
-          // isl ? loadAnimation() : SizedBox(height: 0),
+      
           Row(children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
@@ -500,14 +500,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
               ),
             ),
           ),
-          // Expanded(
-          //   child: Center(
-          //     child: Text(
-          //       'Selected Index: $currentIndex',
-          //       style: TextStyle(fontSize: 24),
-          //     ),
-          //   ),
-          // ),
+          
         ],
       )),
     );

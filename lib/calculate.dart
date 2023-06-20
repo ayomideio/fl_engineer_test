@@ -88,7 +88,7 @@ class _calculateState extends State<calculate> {
           SizedBox(
             height: 20,
           ),
-          // isl ? loadAnimation() : SizedBox(height: 0),
+         
           Row(children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
@@ -259,7 +259,7 @@ class _calculateState extends State<calculate> {
             subtitle: Padding(
               padding: EdgeInsets.only(
                   top:
-                      8), // Adjust the top padding to position the subtitle lower
+                      8), 
               child: Text("What are you sending?"),
             ),
           ),
@@ -312,7 +312,7 @@ class _calculateState extends State<calculate> {
                           angle: 25 * (22 / 7) / 25,
                           child: Icon(Icons.expand_less_outlined,
                               color: Colors.black38),
-                        ), // Change the icon here
+                        ), 
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
                           borderSide: BorderSide.none,
@@ -360,7 +360,7 @@ class _calculateState extends State<calculate> {
             subtitle: Padding(
               padding: EdgeInsets.only(
                   top:
-                      8), // Adjust the top padding to position the subtitle lower
+                      8), 
               child: Text("What are you sending?"),
             ),
           ),
@@ -400,7 +400,7 @@ class _calculateState extends State<calculate> {
                       MaterialPageRoute(
                           builder: (BuildContext build) => CalculateResult()));
 
-                  // Add your button action here
+                  
                 },
                 child: Text(
                   'Calculate',
@@ -418,14 +418,3 @@ class _calculateState extends State<calculate> {
     );
   }
 }
- // Positioned(
-          //   left: (currentIndex *
-          //           (MediaQuery.of(context).size.width / listOfIcons.length)),
-          //   top: 1,
-          //   child: Container(
-          //     height: 3,
-          //     width: MediaQuery.of(context).size.width / listOfIcons.length,
-          //     color: Color(0xff553A9D),
-          //   ),
-          // ),
-        

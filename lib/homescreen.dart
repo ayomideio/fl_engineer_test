@@ -118,8 +118,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         left:
             (index * (MediaQuery.of(context).size.width / listOfIcons.length)) +
                 (MediaQuery.of(context).size.width / listOfIcons.length / 2) -
-                20, // Adjust the position of the labels
-        bottom: 12, // Adjust the vertical position of the labels
+                20, 
+        bottom: 12, 
         child: Text(
           listOfLabels[index],
           style: TextStyle(
@@ -190,7 +190,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         });
       },
       child: Container(
-          // Add top padding of 10 pixels
+          
           decoration: BoxDecoration(
             border: Border(
               bottom: BorderSide(
