@@ -161,8 +161,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                        ), 
                         unselectedLabelStyle: TextStyle(color: Color(0xff553A9D),
                        fontSize: 14
-                       ),// Set the color of the unselected items
-                  // itemStyle: TextStyle(fontWeight: FontWeight.bold),
+                       ),
                 ),
                 Positioned(
                   left: (currentIndex *
@@ -226,7 +225,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             color: isSelected
                                 ? Colors.yellow[900]
                                 : Colors.white.withOpacity(
-                                    .1), // Customize the background color of the container
+                                    .1), 
                           ),
                           child: Center(
                             child: Text(
@@ -638,11 +637,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                             95, 
                                         child: Icon(
                                           Icons
-                                              .navigation_rounded, // Replace with the desired icon
+                                              .navigation_rounded, 
                                           color: Colors.white.withOpacity(
-                                              .4), // Replace with the desired color
+                                              .4),
                                           size:
-                                              20, // Replace with the desired size
+                                              20, 
                                         ),
                                       ),
                                       Text(
@@ -679,20 +678,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors
-                                        .white, // Customize the background color of the container
+                                        .white, 
                                   ),
                                   child: Center(
                                       child: Image.asset(
                                           "assets/vectors/notify.png",
                                           height: 30)),
                                 ),
-                                // IconButton(
-                                //   icon: Icon(Icons.notifications),
-                                //   color: Colors.white,
-                                //   onPressed: () {
-                                //     // Handle notification icon press
-                                //   },
-                                // ),
+                               
                               ],
                             ),
                       isTextFieldFocused
@@ -776,7 +769,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
                 child: Track(
                     shippingNumber:
-                        _shippingNumber), // Replace with your search widget
+                        _shippingNumber), 
               )
             : home();
         ;
@@ -788,7 +781,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               curve: Curves.easeIn,
             ),
           ),
-          child: calculate(), // Replace with your search widget
+          child: calculate(), 
         );
       case 2:
         return FadeTransition(
@@ -800,7 +793,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
           child: shipment(
               selectedTab: getShipmentStatus(
-                  selectedTabIndex)), // Replace with your profile widget
+                  selectedTabIndex)), 
         );
       default:
         return Container();
