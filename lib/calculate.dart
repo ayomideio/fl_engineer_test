@@ -309,9 +309,7 @@ class _calculateState extends State<calculate> {
                           ),
                         ),
                         suffixIcon: Transform.rotate(
-                          angle: 25 *
-                              (22 / 7) /
-                              25, // Adjust the angle as per your requirement
+                          angle: 25 * (22 / 7) / 25,
                           child: Icon(Icons.expand_less_outlined,
                               color: Colors.black38),
                         ), // Change the icon here
@@ -397,11 +395,11 @@ class _calculateState extends State<calculate> {
               ),
               child: TextButton(
                 onPressed: () {
-                   Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext build) => CalculateResult()));
-           
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext build) => CalculateResult()));
+
                   // Add your button action here
                 },
                 child: Text(
@@ -411,7 +409,7 @@ class _calculateState extends State<calculate> {
               ),
             ),
           ),
-          
+
           SizedBox(
             height: 30,
           ),

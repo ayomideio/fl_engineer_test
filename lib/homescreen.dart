@@ -293,14 +293,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       Transform.rotate(
                                         angle: 15 *
                                             (22 / 7) /
-                                            95, // Adjust the angle as per your requirement
+                                            95, // Adjust the angleof the icon
                                         child: Icon(
                                           Icons
-                                              .navigation_rounded, // Replace with the desired icon
+                                              .navigation_rounded, 
                                           color: Colors.white.withOpacity(
-                                              .4), // Replace with the desired color
+                                              .4), 
                                           size:
-                                              20, // Replace with the desired size
+                                              20, 
                                         ),
                                       ),
                                       Text(
@@ -337,20 +337,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors
-                                        .white, // Customize the background color of the container
+                                        .white, 
                                   ),
                                   child: Center(
                                       child: Image.asset(
                                           "assets/vectors/notify.png",
                                           height: 30)),
                                 ),
-                                // IconButton(
-                                //   icon: Icon(Icons.notifications),
-                                //   color: Colors.white,
-                                //   onPressed: () {
-                                //     // Handle notification icon press
-                                //   },
-                                // ),
+                                
                               ],
                             ),
                       isTextFieldFocused
@@ -366,7 +360,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               : Transform.rotate(
                                   angle: 88 *
                                       (22 / 7) /
-                                      25, // Adjust the angle as per your requirement
+                                      25, 
                                   child: IconButton(
                                     onPressed: () {
                                       setState(() {
@@ -468,7 +462,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         Transform.rotate(
                           angle: 88 *
                               (22 / 7) /
-                              25, // Adjust the angle as per your requirement
+                              25, 
                           child: IconButton(
                             onPressed: () {
                               Navigator.pushReplacement(
@@ -527,7 +521,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         Transform.rotate(
                           angle: 88 *
                               (22 / 7) /
-                              25, // Adjust the angle as per your requirement
+                              25, 
                           child: IconButton(
                             onPressed: () {
                               Navigator.pushReplacement(
@@ -641,7 +635,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       Transform.rotate(
                                         angle: 15 *
                                             (22 / 7) /
-                                            95, // Adjust the angle as per your requirement
+                                            95, 
                                         child: Icon(
                                           Icons
                                               .navigation_rounded, // Replace with the desired icon
